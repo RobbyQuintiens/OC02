@@ -28,7 +28,6 @@ jobs:
 
       - name: Build Docker image
         run: |
-          cd demo
           docker build -t ${{ secrets.DOCKER_USERNAME }}/service:${{ github.sha }} .
 
       - name: Log in to Docker Hub
